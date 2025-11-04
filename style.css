@@ -1,0 +1,279 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: whitesmoke;
+  color: #1E3A8A;
+  scroll-behavior: smooth;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  width: 100%;
+  background-color: #1E3A8A;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  width: 80px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.05rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-btn:hover {
+  color: #6B7280;
+}
+
+/* ========== HERO SECTION ========== */
+.mapa {
+  height: 100vh;
+  background-color: #1E3A8A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+  padding-top: 100px;
+}
+
+.mapa-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 3rem;
+  color: white;
+}
+
+.mapa-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.mapa-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  animation: fadeIn 1.2s ease;
+}
+
+.mapa-text p {
+  font-size: 1.2rem;
+  color: #d1d5db;
+  animation: fadeIn 2s ease;
+}
+
+.mapa-map {
+  flex: 1;
+  min-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-placeholder {
+  width: 400px;
+  height: 280px;
+  border: 2px dashed #6B7280;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #d1d5db;
+  font-weight: 500;
+  text-align: center;
+  background-color: rgba(255,255,255,0.05);
+  animation: pulse 2s infinite ease-in-out;
+  position: relative;
+}
+
+.map-icon {
+  font-size: 2.2rem;
+  color: #6B7280;
+  margin-bottom: 0.8rem;
+  animation: bounce 1.8s infinite;
+}
+
+/* ========== ANIMAÇÕES ========== */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.85; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== SEÇÃO DE VÍDEO ========== */
+.video-section {
+  padding: 6rem 10%;
+  background-color: whitesmoke;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.video-container iframe {
+  width: 550px;
+  height: 310px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.video-text {
+  max-width: 400px;
+}
+
+.video-text h2 {
+  font-size: 1.8rem;
+  color: #1E3A8A;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* ========== SEÇÃO DE VANTAGENS ========== */
+.vantagens-section {
+  text-align: center;
+  padding: 6rem 10%;
+  background-color: white;
+}
+
+.vantagens-section h2 {
+  color: #1E3A8A;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #1E3A8A;
+  color: white;
+  width: 280px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background-color: #1E3A8A;
+  color: white;
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-logo {
+  width: 120px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer p {
+  color: #d1d5db;
+  font-size: 0.9rem;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .map-placeholder {
+    width: 100%;
+  }
+
+  .video-container {
+    flex-direction: column;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
