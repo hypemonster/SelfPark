@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="eventos.css">
+</head>
+<body>
+
+  
+
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <img src="assets/selfLOGO.png" alt="Logo Self Park" class="nav-logo" id="homeLogo">
+      <nav class="nav-links">
+        <button class="nav-btn" id="reservarBtn"><a href="reservas.html" style="color:inherit;text-decoration:none;">Reservar</a></button>
+        <button class="nav-btn" id="loginBtn"><a href="login.html" style="color:inherit;text-decoration:none;">Login</a></button>
+        <button class="nav-btn" id="cadastroBtn"><a href="cadastro.html" style="color:inherit;text-decoration:none;">Cadastre-se</a></button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======== CONTEÚDO PRINCIPAL ======== -->
+  <aside class="filter-sidebar" id="filterSidebar">
+    <form id="filterForm" class="filter-form" aria-label="Filtrar eventos">
+      <div class="filter-header">
+        <h3>Filtrar Local</h3>
+      </div>
+
+      <div class="form-group">
+        <label for="cidade">Cidade</label>
+        <select id="cidade" name="cidade">
+          <option value="">Todas as cidades</option>
+          <option value="sp">São Paulo</option>
+          <option value="rj">Rio de Janeiro</option>
+          <option value="bh">Belo Horizonte</option>
+          <option value="cur">Curitiba</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="data">Data</label>
+        <input id="data" name="data" type="date" />
+      </div>
+
+      <div class="form-group">
+        <label for="tipo">Tipo de Local</label>
+        <select id="tipo" name="tipo">
+          <option value="">Todos os tipos</option>
+          <option value="show">Show</option>
+          <option value="esporte">Esporte</option>
+          <option value="teatro">Teatro</option>
+          <option value="exposicao">Exposição</option>
+        </select>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="filter-btn">Aplicar filtros</button>
+        <button type="button" id="clearBtn" class="clear-btn">Limpar</button>
+      </div>
+    </form>
+  </aside>
+
+  <main class="main-content">
+    <header class="main-header">
+      <h1>Eventos</h1>
+      <p class="subtitle">Encontre e reserve vagas nos principais eventos.</p>
+
+      <div class="results-info">
+        <span id="resultsCount"> </span>
+        <p id="noResults" class="no-results" style="display:none;">Nenhum evento encontrado.</p>
+      </div>
+    </header>
+
+    <section class="row" id="eventsGrid">
+      <a href="datetime.html" class="card" data-city="sp" data-type="show" data-start="2025-11-04" data-end="2025-12-11">
+        <div class="img-container">
+          <img src="https://picsum.photos/640/400?random=11" alt="Vozes Negras">
+        </div>
+        <div class="info">
+          <h3>Vozes Negras</h3>
+          <p class="date"><span class="material-icons">event</span> 04/11 a 11/12/2025 • São Paulo</p>
+        </div>
+      </a>
+
+      <a href="evento2.html" class="card" data-city="sp" data-type="esporte" data-start="2025-11-06" data-end="2025-11-06">
+        <div class="img-container">
+          <img src="https://picsum.photos/640/400?random=12" alt="Palmeiras x Santos">
+        </div>
+        <div class="info">
+          <h3>Palmeiras x Santos</h3>
+          <p class="date"><span class="material-icons">event</span> 06/11/2025 • Allianz Parque</p>
+        </div>
+      </a>
+
+      <a href="evento3.html" class="card" data-city="sp" data-type="show" data-start="2025-11-06" data-end="2025-11-06">
+        <div class="img-container">
+          <img src="https://picsum.photos/640/400?random=13" alt="Moyses Rico e Iara Bicalho">
+        </div>
+        <div class="info">
+          <h3>Moyses Rico e Iara Bicalho</h3>
+          <p class="date"><span class="material-icons">event</span> 06/11/2025 • Villa Country</p>
+        </div>
+      </a>
+
+      <a href="evento4.html" class="card" data-city="rj" data-type="teatro" data-start="2025-11-10" data-end="2025-11-13">
+        <div class="img-container">
+          <img src="https://picsum.photos/640/400?random=14" alt="Peça Teatral">
+        </div>
+        <div class="info">
+          <h3>Peça Teatral</h3>
+          <p class="date"><span class="material-icons">event</span> 10/11 a 13/11/2025 • Rio</p>
+        </div>
+      </a>
+
+      <a href="evento5.html" class="card" data-city="bh" data-type="exposicao" data-start="2025-11-20" data-end="2025-12-05">
+        <div class="img-container">
+          <img src="https://picsum.photos/640/400?random=15" alt="Exposição">
+        </div>
+        <div class="info">
+          <h3>Exposição de Arte</h3>
+          <p class="date"><span class="material-icons">event</span> 20/11 a 05/12/2025 • BH</p>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <script src="eventos.js"></script>
+</body>
+</html>
+
+</body>
+</html>

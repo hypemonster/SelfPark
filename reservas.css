@@ -1,0 +1,244 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+    }
+
+    #hotel { background-image: url('imagens/hotel.png'); }
+    #parque { background-image: url('imagens/parque.png'); }
+    #shopping { background-image: url('imagens/shopping.png'); }
+    #estadio { background-image: url('imagens/estadio.png'); }
+    #eventos { background-image: url('imagens/eventos.png'); }
+
+
+     * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #1E3A8A;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .navbar {
+  width: 100%;
+  background-color: #1E3A8A;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  height: 50px;
+}
+
+/* Container centralizado */
+.nav-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Logo centralizada */
+.nav-logo {
+  width: 85px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+}
+
+.nav-logo:hover {
+  transform: translateX(-50%) scale(1.05);
+}
+
+/* Botões à direita */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  right: 2rem;
+  margin-top: 20px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.05rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-btn:hover {
+  color: #9CA3AF;
+}
+
+/* Espaçamento do conteúdo para não ficar escondido atrás da navbar */
+body {
+  padding-top: 90px;
+}
+
+
+
+    /* Barra de pesquisa no canto esquerdo */
+    .search-container {
+      position: absolute;
+      top: 50px;
+      left: 150px;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-container input {
+      width: 700px;
+      padding: 10px 40px 10px 0;
+      border: none;
+      border-bottom: 2px solid white;
+      background: transparent;
+      color: white;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .search-container input::placeholder {
+      color: white;
+      opacity: 0.8;
+    }
+
+    .search-container button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .search-container button svg {
+      width: 20px;
+      height: 20px;
+      stroke: white;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    /* Grid dos círculos (3 em cima, 2 embaixo) */
+   .icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 60px 80px;
+    margin-top: 180px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  /* Segunda linha (2 círculos centralizados) */
+  .icon-grid a:nth-child(4) {
+    grid-column: 2;
+  }
+
+  .icon-grid a:nth-child(5) {
+    grid-column: 3;
+  }
+
+  /* Círculos base */
+  .item {
+    --itemWidth: 230px;
+    --itemWidthMinus: calc(-1 * var(--itemWidth));
+    width: var(--itemWidth);
+    height: var(--itemWidth);
+    border-radius: 50%;
+    background-color: white;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+      inset var(--itemWidthMinus) var(--itemWidthMinus) 0 black,
+      inset var(--itemWidth) var(--itemWidthMinus) 0 green,
+      inset var(--itemWidthMinus) var(--itemWidth) 0 blue,
+      inset var(--itemWidth) var(--itemWidth) 0 yellow,
+      0 0 20px silver;
+    transition: box-shadow 0.6s ease-in-out, transform 0.4s ease;
+  }
+
+  .item:hover {
+    box-shadow:
+      inset 0 0 0 transparent,
+      inset 0 0 0 transparent,
+      inset 0 0 0 transparent,
+      inset 0 0 0 transparent,
+      0 0 20px silver;
+    transform: scale(1.05);
+  }
+
+  /* Imagem dentro do círculo */
+  .item img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    transition: opacity 0.6s ease;
+    z-index: 1;
+  }
+
+  /* Texto (legenda) */
+  .item span {
+    position: absolute;
+    color: black;
+    font-weight: 600;
+    font-size: 1.1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    z-index: 2;
+  }
+
+  /* Hover: imagem desaparece e texto aparece */
+  .item:hover img {
+    opacity: 0;
+  }
+
+  .item:hover span {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Ajustes individuais */
+  #estadio {
+    transform: translateX(-180px);
+  }
+
+  #eventos {
+    transform: translateX(-135px);
+  }
+
+  #hotel {
+    transform: translateX(-40px);
+  }
+
+  #shopping {
+    transform: translateX(40px);
+  }
+
+  a {
+    text-decoration: none;
+  }
